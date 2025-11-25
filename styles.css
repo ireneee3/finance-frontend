@@ -1,0 +1,148 @@
+
+
+:root {
+  --bg: #05070a;
+  --card: #0e1117;
+  --blue: #3dbbff;
+  --light-blue: #7fd8ff;
+  --text: #e6f4ff;
+  --muted: #8faec7;
+  --glow: 0 0 12px rgba(61,187,255,0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+}
+
+
+
+.sidebar {
+  width: 230px;
+  background: #0a0d11;
+  height: 100vh;
+  position: fixed;
+  padding: 24px 18px;
+  border-right: 1px solid #1a1f27;
+  box-shadow: var(--glow);
+}
+
+.sidebar h2 {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  color: var(--blue);
+  text-shadow: var(--glow);
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: var(--light-blue);
+  border-radius: 6px;
+  transition: 0.2s ease;
+  font-size: 1.05rem;
+}
+
+.sidebar a:hover {
+  background: var(--blue);
+  color: #000;
+  box-shadow: var(--glow);
+}
+
+
+
+.main {
+  margin-left: 230px;
+  padding: 40px;
+  width: calc(100% - 230px);
+}
+
+
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #1d232d;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+h1, h2 {
+  color: var(--light-blue);
+  text-shadow: var(--glow);
+}
+
+
+
+form {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 450px;
+  border: 1px solid #1c2029;
+  box-shadow: var(--glow);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  background: #090c10;
+  border: 1px solid #28313f;
+  border-radius: 8px;
+  color: var(--text);
+}
+
+input:focus, select:focus {
+  border-color: var(--blue);
+  box-shadow: var(--glow);
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: var(--blue);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: var(--glow);
+}
+
+/*dashboard*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+@media(max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
